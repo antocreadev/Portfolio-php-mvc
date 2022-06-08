@@ -29,7 +29,11 @@ if (isset($_SESSION['admin_fullname'])) {
 
 }
 else {
-    header('Location: login.php/?error=Vous devez vous connecter');
+    echo("<script>alert('Vous devez vous connecter');</script>");
+    // clean url get in js
+
+    echo("<script>document.location =
+    'login.php';</script>");
 }
 
 ?>
